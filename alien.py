@@ -1,0 +1,22 @@
+import pygame
+from pygame.sprite import Sprite
+
+
+class Alien(Sprite):
+    # classe para representar apenas um alienigena
+
+    def __init__(self, ai_game):
+        # inicializa o alien e define sua posição inicial
+        super().__init__()
+        self.screen = ai_game.screen
+
+        # carrega a sua imagem e define sua posição rect
+        self.image = pygame.image.load('Images/alienPNG-removebg.bmp')
+        self.rect = self.image.get_rect()
+
+        # inicia cada alien no canto esquerdo da tela
+        self.rect.x = self.rect.width
+        self.rect.y = self.rect.height
+
+        # armazena a posição horizontal exata do alien
+        self.x = float(self.rect.x)

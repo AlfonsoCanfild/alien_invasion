@@ -2,7 +2,7 @@ class Settings:
 
     def __init__(self):
         # config da tela
-        self.screen_width = 1000
+        self.screen_width = 1200
         self.screen_height = 600
         self.bg_color = (109, 139, 143)
         self.ship_speed = 4
